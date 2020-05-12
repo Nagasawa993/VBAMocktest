@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <title>VBA 1章</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
+  </div>
+
+  <div class="main">
+    <div class="side-list">
+      <ul>
+        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
+        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
+        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
+        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
+        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
+        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
+        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
+        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+      </ul>
+    </div>
+
+
+    <div class="page">
+  <h1>【1章】　プロシージャ</h1>
+  <!-- ーーーー問題１ーーーー -->
+  <SCRIPT language="JavaScript">
+    function check1(){
+    if (document.que1.answer1.value.toUpperCase()=="FUNCTION"){
+         alert("正解です");
+    }
+    else {
+         alert("残念、間違いです")
+    }
+    }
+      function check1b() {
+          alert("Function");
+      }
+    </SCRIPT>
+  <FORM name="que1">
+    <span class="source">
+    　<h2>Q1)　[空欄]に入るコードは何か？</h2>
+    <pre>
+      <code>
+      Sub Sample1_1()
+      　Range("A1") = 100
+      　Range("B1") =Sample1_2
+      End Sub
+      
+      [空欄] Sample1_2()
+      　Sample2 = Range("A1")*2
+      End Function
+    </code>
+    </pre>
+    </span>
+    <br>
+    　答え：　<INPUT type="text" name="answer1">
+    <INPUT class="send" type="button" value="回答する" onClick="check1()">
+  </FORM>
+    <FORM method="POST"><P>
+    <INPUT class="display" type="button" name="B1"value="答えを表示する"onclick="check1b()"></P>
+    </FORM>
+
+<!-- ーーーー問題２ーーーー -->
+    <SCRIPT language="JavaScript">
+      function check2(){
+      if (document.que2.answer2.value=="210"){
+           alert("正解です");
+      }
+      else {
+           alert("残念、間違いです")
+      }
+      }
+        function check2b() {
+            alert("210");
+        }
+      </SCRIPT>
+    <FORM name="que2">
+    <span class="source">
+    　<h2>Q2)　次のコードを実行した場合、メッセージボックスにはなんと表示されるか</h2>
+    <pre>
+      <code>
+      Sub Sample1_3()
+      　Range("A1")=100
+      　Range("B1")=Range("A1") * 2
+      　Call Sample1_4
+      End Sub
+      
+      Sub Sample1_4()
+      　Range("B1") = Range("B1") + 10
+      　Msgbox Range("B1")
+      End Sub
+    </code>
+  </pre>
+    </span>
+    <br>
+    　答え：　<INPUT type="text" name="answer2">
+    <input class="send" type="button" value="回答する" onClick="check2()">
+    </FORM>
+    <FORM method="POST"><P>
+      <INPUT class="display" type="button" name="B1"
+      value="答えを表示する"
+      onclick="check2b()"></P>
+      </FORM>
+
+<!-- ーーーー問題３ーーーー -->
+<SCRIPT language="JavaScript">
+  function check3(){
+  if (document.que3.answer3.value.toUpperCase()=="CHKSHEET"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check3b() {
+        alert("ChkSheet");
+    }
+  </SCRIPT>
+    <FORM name="que3">
+      <span class="source">
+      　<h2>Q3)　次のコードは、InputBoxで入力された名前のシートが、すでに存在するかどうかを調べ、もし存在しなかったら新しく作成するマクロである。
+        [空欄]に入る適切な語句を記入しなさい。</h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　Dim NewSheet As String
+        　NewSheet = InputBox("シートの名前は？")
+        　If NewSheet <> "" Then
+        　　If ChkSheet(NewSheet) = False Then
+        　　　Sheets.Add After:=Sheets(Sheets.Count)
+        　　　ActiveSheet.Name = NewSheet
+        　　End If
+        　End If
+        End Sub
+    
+    Function ChkSheet(SheetName As String)
+      　Dim i As Long, flag As Boolean
+      　flag = False
+      　　For i = 1 To Sheets.Count
+      　　　If Sheets(i).Name = SheetName Then
+      　　　　flag = True
+      　　　　　Exit For
+      　　　End If
+      　　Next i
+      　　[空欄] = flag
+      End Function
+    </code>
+  </pre>
+      </span><br>
+      　答え：　<INPUT type="text" name="answer3">
+      <INPUT class="send" type="button" value="回答する" onClick="check3()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check3b()"></P>
+        </FORM>
+      </div>
+    </div>
+</body>
+</html>

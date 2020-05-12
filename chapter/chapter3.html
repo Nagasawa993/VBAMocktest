@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <title>VBA 3章</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
+  </div>
+
+  <div class="main">
+    <div class="side-list">
+      <ul>
+        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
+        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
+        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
+        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
+        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
+        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
+        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
+        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+      </ul>
+    </div>
+
+
+    <div class="page">
+  <h1>【3章】　ステートメント</h1>
+      <!-- ーーーー問題8ーーーー -->
+<SCRIPT language="JavaScript">
+  function check8(){
+  if (document.que8.answer8.value.toUpperCase()=="CASE ELSE"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check8b() {
+        alert("Case Else");
+    }
+  </SCRIPT>
+    <FORM name="que8">
+      <span class="source">
+      　<h2>Q8)　次のコードは、B列の数値が80より大きいときはC列に"○"を代入し、40より小さいときはC列に"×"を代入し、どちらでもないときはC列に"△"を代入するマクロである。[空欄]に入る適切な語句を入力しなさい。</h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Dim i As Long
+      　For i = 2 To 11
+      　　Select Case Cells(i, 2)
+      　　Case Is > 80
+      　　　Cells(i, 3) = "○"
+      　　Case Is < 40
+      　　　Cells(i, 3) = "×"
+      　　[空欄]
+      　　　Cells(i, 3) = "△"
+      　End Select
+      　Next i
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+      　答え：　<INPUT type="text" name="answer8">
+      <INPUT class="send" type="button" value="回答する" onClick="check8()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check8b()"></P>
+        </FORM>
+
+<!-- ーーーー問題9ーーーー -->
+<SCRIPT language="JavaScript">
+  function check9(){
+  if (document.que9.answer9.value.toUpperCase()=="SUB"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check9b() {
+        alert("Sub");
+    }
+  </SCRIPT>
+    <FORM name="que9">
+      <span class="source">
+      　<h2>Q9)　次のコードは、アクティブブック内に"合計"という名前のシートが存在するかどうかを判定して、存在するときは"存在します"、存在しないときは"存在しません"とメッセージボックスに表示するマクロである。空欄に入る適切な語句を入力しなさい。</h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Dim ws As Worksheet
+      　For Each ws In Sheets
+      　　If ws.Name = "合計" Then
+      　　　MsgBox "存在します"
+      　　　Exit [空欄]
+      　　End If
+      　Next ws
+      　MsgBox "存在しません"
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+      　答え：　<INPUT type="text" name="answer9">
+      <INPUT class="send" type="button" value="回答する" onClick="check9()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check9b()"></P>
+        </FORM>
+
+<!-- ーーーー問題10ーーーー -->
+<SCRIPT language="JavaScript">
+  function check10(){
+  if (document.que10.answer10.value.toUpperCase()=="VARIANT"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check10b() {
+        alert("Variant");
+    }
+  </SCRIPT>
+    <FORM name="que10">
+      <span class="source">
+      　<h2>Q10)　次のコードは、A列に入力されているコードをハイフンで区切り、そこに含まれる数値をB列に代入するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。</h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　Dim i As Long, A As Variant, B As [空欄]
+        　For i = 2 To 10
+        　　A = Split(Cells(i, 1), "-")
+        　　For Each B In A
+        　　　If IsNumeric(B) = True Then
+        　　　　Cells(i, 2) = B
+        　　　End If
+        　　Next B
+        　Next i
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+        <img src="../assets/imgs/img5.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer10">
+      <INPUT class="send" type="button" value="回答する" onClick="check10()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check10b()"></P>
+        </FORM>
+
+<!-- ーーーー問題11ーーーー -->
+<SCRIPT language="JavaScript">
+  function check11(){
+  if (document.que11.answer11.value=="50"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check11b() {
+        alert("50");
+    }
+  </SCRIPT>
+    <FORM name="que11">
+      <span class="source">
+      　<h2>Q11)　次のコードは、A列とB列の値によってC列に数値を代入するマクロである。このマクロを実行した結果のC列に代入される数値の合計はいくつか。
+        [空欄]に入る適切な語句を入力しなさい。</h2>
+        <pre>
+          <code>
+        C列の合計は[空欄]である。
+        Sub Macro1()
+        　Dim i As Long
+        　For i = 2 To 11
+        　　Select Case Cells(i, 1)
+        　　Case "東京"
+        　　　Select Case Cells(i, 2)
+        　　　Case "みかん"
+        　　　　Cells(i, 3) = 10
+        　　　Case "リンゴ"
+        　　　　Cells(i, 3) = 20
+        　　　End Select
+        　　Case "神奈川"
+        　　　Select Case Cells(i, 2)
+        　　　　Case "みかん"
+        　　　　　Cells(i, 3) = 30
+        　　　　Case "リンゴ"
+        　　　　　Cells(i, 3) = 40
+        　　　End Select
+        　　End Select
+        　Next i
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+        <img src="../assets/imgs/img6.png"alt="問題のシート画像" width="400"><br>
+
+      　答え：　<INPUT type="text" name="answer11">
+      <INPUT class="send" type="button" value="回答する" onClick="check11()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check11b()"></P>
+        </FORM>
+</div>
+</div>
+</body>
+</html>

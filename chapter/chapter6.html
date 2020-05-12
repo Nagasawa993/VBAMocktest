@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <title>VBA 6章</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
+  </div>
+
+  <div class="main">
+    <div class="side-list">
+      <ul>
+        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
+        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
+        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
+        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
+        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
+        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
+        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
+        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+      </ul>
+    </div>
+
+
+    <div class="page">
+  <h1>【6章】　検索とオートフィルター</h1>
+
+  <!-- ーーーー問題20ーーーー -->
+<SCRIPT language="JavaScript">
+  function check20(){
+  if (document.que20.answer20.value.toUpperCase()=="XLWHOLE"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check20b() {
+        alert("xlWhole");
+    }
+  </SCRIPT>
+    <FORM name="que20">
+      <span class="source">
+      　<h2>Q20)　次のコードは、セル範囲A1:A8で"A-12"を「完全一致」で検索し、見つかったセルの右隣のセルの値をメッセージボックスに表示するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+      </h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Dim A As Range
+      　Set A = Range("A1:A8").Find(What:="A-12", Lookat:=[空欄])
+      　MsgBox A.Offset(0, 1)
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+        <img src="../assets/imgs/img11.png"alt="問題のシート画像" width="200"><br>
+      　答え：　<INPUT type="text" name="answer20">
+      <INPUT class="send" type="button" value="回答する" onClick="check20()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check20b()"></P>
+        </FORM>
+
+<!-- ーーーー問題22ーーーー -->
+<SCRIPT language="JavaScript">
+  function check22(){
+  if (document.que22.answer22.value.toUpperCase()=="NOTHING"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check22b() {
+        alert("Nothing");
+    }
+  </SCRIPT>
+    <FORM name="que22">
+      <span class="source">
+      　<h2>Q22)　次のコードは、セル範囲A1:A11で"佐々木"を検索し、見つかったときは見つかったセルのアドレスをメッセージボックスに表示し、
+        見つからなかったときは"見つかりません"と表示するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+      </h2>
+      <pre>
+        <code>
+      Sub Macro3()
+      　Dim A As Range
+      　Set A = Range("A1:A11").Find(What:="佐々木")
+      　If A Is [空欄] Then
+      　　MsgBox "見つかりません"
+      　Else
+      　　MsgBox A.Address
+      　End If
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+        <img src="../assets/imgs/img13.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer22">
+      <INPUT class="send" type="button" value="回答する" onClick="check22()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check22b()"></P>
+        </FORM>
+
+<!-- ーーーー問題23ーーーー -->
+<SCRIPT language="JavaScript">
+  function check23(){
+  if (document.que23.answer23.value.toUpperCase()=="XLOR"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check23b() {
+        alert("xlOr");
+    }
+  </SCRIPT>
+    <FORM name="que23">
+      <span class="source">
+      　<h2>Q23)　次のコードは、セルA1を含む表に対して「1列目が"東京"または"大阪"である」という条件で絞り込むマクロである。
+        [空欄]に入る定数を記述しなさい。
+      </h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Range("A1").AutoFilter 1, "東京", [空欄], "大阪"
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+        <img src="../assets/imgs/img14.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer23">
+      <INPUT class="send" type="button" value="回答する" onClick="check23()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check23b()"></P>
+        </FORM>
+
+<!-- ーーーー問題24ーーーー -->
+<SCRIPT language="JavaScript">
+  function check24(){
+  if (document.que24.answer24.value.toUpperCase()=="CURRENTREGION"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check24b() {
+        alert("CurrentRegion");
+    }
+  </SCRIPT>
+    <FORM name="que24">
+      <span class="source">
+      　<h2>Q24)　次のコードは、セルA1を含む表に対して「1列目が"東京"と等しい」で絞り込み、その結果全体をSheet2のセルA1にコピーするマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+      </h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Range("A1").AutoFilter 1, "東京"
+      　Range("A1").[空欄].Copy Sheets("Sheet2").Range("A1")
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+        <img src="../assets/imgs/img15.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer24">
+      <INPUT class="send" type="button" value="回答する" onClick="check24()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check24b()"></P>
+        </FORM>
+
+<!-- ーーーー問題25ーーーー -->
+<SCRIPT language="JavaScript">
+  function check25(){
+  if (document.que25.answer25.value.touppercase()=="SUBTOTAL"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check25b() {
+        alert("Subtotal");
+    }
+  </SCRIPT>
+    <FORM name="que25">
+      <span class="source">
+      　<h2>Q25)　次のコードは、セルA1を含む表に対して「1列目が"ダージリン"と等しい」で絞り込み、その結果が何件あるかを画面に表示するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+      </h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Range("A1").AutoFilter 1, "ダージリン"
+      　MsgBox WorksheetFunction.[空欄](3, Range("A:A")) - 1
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+        <img src="../assets/imgs/img16.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer25">
+      <INPUT class="send" type="button" value="回答する" onClick="check25()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check25b()"></P>
+        </FORM>
+
+</div>
+</div>
+</body>
+</html>

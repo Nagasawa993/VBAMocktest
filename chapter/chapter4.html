@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <title>VBA 4章</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
+  </div>
+
+  <div class="main">
+    <div class="side-list">
+      <ul>
+        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
+        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
+        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
+        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
+        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
+        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
+        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
+        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+      </ul>
+    </div>
+
+
+    <div class="page">
+  <h1>【4章】　ファイルの操作</h1>
+
+  <!-- ーーーー問題12ーーーー -->
+<SCRIPT language="JavaScript">
+  function check12(){
+  if (document.que12.answer12.value.toUpperCase()=="OPEN"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check12b() {
+        alert("Open");
+    }
+  </SCRIPT>
+    <FORM name="que12">
+      <span class="source">
+      　<h2>Q12)　次のコードは、"C:\Work\Data.xlsx"を開くマクロである。空欄に入る適切な語句を入力しなさい。</h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Workbooks.[空欄] "C:\Work\Data.xlsx"
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+      　答え：　<INPUT type="text" name="answer12">
+      <INPUT class="send" type="button" value="回答する" onClick="check12()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check12b()"></P>
+        </FORM>
+
+<!-- ーーーー問題13ーーーー -->
+<SCRIPT language="JavaScript">
+  function check13(){
+  if (document.que13.answer13.value.toUpperCase()=="YAER"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check13b() {
+        alert("Year");
+    }
+  </SCRIPT>
+    <FORM name="que13">
+      <span class="source">
+      　<h2>Q13)　次のコードは、アクティブブックに「報告書2019.xlsx」のような名前をつけて保存するマクロである。
+        ファイル名の"2019"は、現在の西暦年とする。[空欄]に入る適切な語句を入力しなさい。</h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　ActiveWorkbook.SaveAs "報告書" & [空欄](Now) & ".xlsx"
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+      　答え：　<INPUT type="text" name="answer13">
+      <INPUT class="send" type="button" value="回答する" onClick="check13()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check13b()"></P>
+        </FORM>
+
+<!-- ーーーー問題14ーーーー -->
+<SCRIPT language="JavaScript">
+  function check14(){
+  if (document.que14.answer14.value.toUpperCase()=="FILECOPY"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check14b() {
+        alert("FileCopy");
+    }
+  </SCRIPT>
+    <FORM name="que14">
+      <span class="source">
+      　<h2>Q14)　次のコードは、C:\Dataフォルダにある"予算.xlsx"を"実績.xlsx"としてコピーするマクロである。
+        [空欄]に入る適切な語句を入力しなさい。</h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　[空欄] "C:\Data\予算.xlsx", "C:\Data\実績.xlsx"
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+      　答え：　<INPUT type="text" name="answer14">
+      <INPUT class="send" type="button" value="回答する" onClick="check14()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check14b()"></P>
+        </FORM>
+
+<!-- ーーーー問題15ーーーー -->
+<SCRIPT language="JavaScript">
+  function check15(){
+  if (document.que15.answer15.value.toUpperCase()=="MKDIR"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check15b() {
+        alert("MkDir");
+    }
+  </SCRIPT>
+    <FORM name="que15">
+      <span class="source">
+      　<h2>Q15)　次のコードは、C:\Dataフォルダに"2019"という名前のフォルダを作成するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+        </h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　[空欄] "C:\Data\2019"
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+      　答え：　<INPUT type="text" name="answer15">
+      <INPUT class="send" type="button" value="回答する" onClick="check15()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check15b()"></P>
+        </FORM>
+
+</div>
+</div>
+</body>
+</html>

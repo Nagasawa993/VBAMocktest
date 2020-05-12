@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <title>VBA 2章</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
+  </div>
+
+  <div class="main">
+    <div class="side-list">
+      <ul>
+        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
+        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
+        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
+        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
+        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
+        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
+        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
+        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+      </ul>
+    </div>
+
+    <div class="page">
+  <h1>【2章】　変数の活用</h1>
+<!-- ーーーー問題4ーーーー -->
+<SCRIPT language="JavaScript">
+  function check4(){
+  if (document.que4.answer4.value=="1"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check4b() {
+        alert("1");
+    }
+  </SCRIPT>
+    <FORM name="que4">
+      <span class="source">
+      　<h2>Q4)　次のコードは、A列に"東京"と入力されているセルの個数をカウントするマクロである。[空欄]に入る適切な語句を入力しなさい。</h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Dim i As Long, A As Long
+      　For i = 2 To 10
+      　　If Cells(i, 1) = "東京" Then
+      　　　A = A + [空欄]
+      　　End If
+      　Next i
+      　MsgBox A
+      End Sub
+    </code>
+  </pre>
+      <img src="../assets/imgs/img1.png"alt="問題のシート画像" width="300"><br>
+      </span>
+      <br>
+      　答え：　<INPUT type="text" name="answer4">
+      <INPUT class="send" type="button" value="回答する" onClick="check4()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check4b()"></P>
+        </FORM>
+
+<!-- ーーーー問題5ーーーー -->
+<SCRIPT LANGUAGE="JavaScript">
+function Check5() {
+answer=document.que5.mondai1[3].checked;
+if(answer==true){alert("正解")}
+else{alert("不正解")}
+}
+
+function check5b() {
+    alert("A = 0");
+}
+</SCRIPT>
+<FORM name="que5">
+  <span class="source"></span>
+  <h2>Q5)　次のコードは、B列からD列で、2行目から7行目までの数値を合計して、8行目に代入するマクロである。
+    [空欄]に入る語句はどれか。次の中から正しいものを１つ選択しなさい。</h2>
+    <pre>
+      <code>
+    Sub Macro1()
+    　Dim i As Long, j As Long, A As Long
+    　For j = 2 To 4
+    　　[空欄]
+    　　　For i = 2 To 7
+    　　　　A = A + Cells(i, j)
+    　　　　　Next i
+    　　　　　　Cells(8, j) = A
+    　　　　　Next j
+    End Sub
+  </code>
+</pre>
+    <img src="../assets/imgs/img2.png"alt="問題のシート画像" width="500"><br>
+<input type=radio name=mondai1>A = A + Cells(i, j)<br>
+<input type=radio name=mondai1>A = A +1<br>
+<input type=radio name=mondai1>A = 1<br>
+<input type=radio name=mondai1>A = 0<br>
+<input class="display" type=button name=ok value="回答する" onclick="Check5()">
+<INPUT class="display" type="button" name="B1"value="答えを表示する"onclick="check5b()"></P>
+</FORM>
+
+<!-- ーーーー問題6ーーーー -->
+<SCRIPT LANGUAGE="JavaScript">
+  function Check6() {
+  answer=document.que6.mondai6[1].checked;
+  if(answer==true){alert("正解")}
+  else{alert("不正解")}
+  }
+  function check6b() {
+      alert("[ 1 ]Variant [ 2 ]Split");
+  }
+  </SCRIPT>
+  <FORM name="que6">
+    <span class="source"></span>
+    <h2>Q6)　次のコードは、A列に入力されているコードのうち、ハイフンで囲まれた名前を抜き出して、B列に代入するマクロである。
+    [空欄]に入る語句の組合せとして正しいものを、次の中から１つ選択しなさい。</h2>
+    <pre>
+      <code>
+      Sub Macro1()
+      　Dim i As Long, A As [ 1 ]
+      　　For i = 2 To 7
+      　　　A = [ 2 ](Cells(i, 1), "-")
+      　　　Cells(i, 2) = A(1)
+      　　Next i
+      End Sub
+    </code>
+  </pre>
+  </span>
+  <br>
+      <img src="../assets/imgs/img3.png"alt="問題のシート画像" width="300"><br>
+  <input type=radio name=mondai6>[ 1 ]Variant [ 2 ]Midbr<br>
+  <input type=radio name=mondai6>[ 1 ]Variant [ 2 ]Split<br>
+  <input type=radio name=mondai6>[ 1 ]String [ 2 ]Mid<br>
+  <input type=radio name=mondai6>[ 1 ]String [ 2 ]Split<br>
+  <input class="send" type=button name=ok value="回答する" onclick="Check6()">
+  <INPUT class="display" type="button" name="B1"value="答えを表示する"onclick="check6b()"></P>
+  </FORM>
+
+<!-- ーーーー問題7ーーーー -->
+<SCRIPT LANGUAGE="JavaScript">
+  function Check7() {
+  answer=document.que7.mondai7[3].checked;
+  if(answer==true){alert("正解")}
+  else{alert("不正解")}
+  }
+  function check7b() {
+      alert("Set x = Workbooks(1).Worksheets（1）");
+  }
+  </SCRIPT>
+  <FORM name="que7">
+    <span class="source"></span>
+    <h2>Q7)　次のマクロは、最初に開いたブックの1枚目のシートのセルA1に、"日付"と入力するマクロである。
+      空欄【 1 】に入るステートメントとして、正しいものはどれか。次の中から１つ選択しなさい。</h2>
+      <pre>
+        <code>
+      Sub Sample()
+      　Dim x As Worksheet
+      　[ 1 ]
+      　x.Range("A1").Value = "日付"
+      End Sub
+    </code>
+  </pre>
+    </span>
+    <br>
+      <img src="../assets/imgs/img4.png"alt="問題のシート画像" width="350"><br>
+  <input type=radio name=mondai7>x = Workbooks(1).Worksheet<br>
+  <input type=radio name=mondai7>x = Workbooks(1).Worksheets(1)<br>
+  <input type=radio name=mondai7>Set x = Workbooks(1).Worksheet<br>
+  <input type=radio name=mondai7>Set x = Workbooks(1).Worksheets（1）<br>
+  <input class="send" type=button name=ok value="回答する" onclick="Check7()">
+  <INPUT class="display" type="button" name="B1"value="答えを表示する"onclick="check7b()"></P>
+  </FORM>
+</div>
+
+</body>
+</html>

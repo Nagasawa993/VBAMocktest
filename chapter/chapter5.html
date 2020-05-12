@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <title>VBA 5章</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
+  </div>
+
+  <div class="main">
+    <div class="side-list">
+      <ul>
+        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
+        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
+        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
+        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
+        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
+        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
+        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
+        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
+        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+      </ul>
+    </div>
+
+
+    <div class="page">
+  <h1>【5章】　ワークシート関数の利用</h1>
+<!-- ーーーー問題16ーーーー -->
+<SCRIPT language="JavaScript">
+  function check16(){
+  if (document.que16.answer16.value.toUpperCase()=="SUMIF"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check16b() {
+        alert("SumIf");
+    }
+  </SCRIPT>
+    <FORM name="que16">
+      <span class="source">
+      　<h2>Q16)　次のコードは、A列が"名古屋"である行のB列に入力されている数値を合計して、メッセージボックスに表示するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+        </h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　MsgBox WorksheetFunction.[空欄](Range("A2:A10"), "名古屋", Range("B2:B10"))
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+        <img src="../assets/imgs/img7.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer16">
+      <INPUT class="send" type="button" value="回答する" onClick="check16()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check16b()"></P>
+        </FORM>
+
+<!-- ーーーー問題17ーーーー -->
+<SCRIPT language="JavaScript">
+  function check17(){
+  if (document.que17.answer17.value.toUpperCase()=="SMALL"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check17b() {
+        alert("Small");
+    }
+  </SCRIPT>
+    <FORM name="que17">
+      <span class="source">
+      　<h2>Q17)　次のコードは、A列に入力されている数値のうち「3番目に小さい数値」をメッセージボックスに表示するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。</h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　MsgBox WorksheetFunction.[空欄](Range("A2:A10"), 3)
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+        <img src="../assets/imgs/img8.png"alt="問題のシート画像" width="200"><br>
+      　答え：　<INPUT type="text" name="answer17">
+      <INPUT class="send" type="button" value="回答する" onClick="check17()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check17b()"></P>
+        </FORM>
+
+<!-- ーーーー問題18ーーーー -->
+<SCRIPT language="JavaScript">
+  function check18(){
+  if (document.que18.answer18.value.toUpperCase()=="COUNTIF"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check18b() {
+        alert("CountIf");
+    }
+  </SCRIPT>
+    <FORM name="que18">
+      <span class="source">
+      　<h2>Q18)　次のコードは、セル範囲A2:A11の中に"西岡"という文字列が存在するかどうかを調べるマクロである。
+        [空欄]に入る適切な語句を入力しなさい。</h2>
+        <pre>
+          <code>
+        Sub Macro1()
+        　If WorksheetFunction.[空欄](Range("A2:A11"), "西岡") = 0 Then
+        　　MsgBox "西岡は存在しません"
+        　Else
+        　　MsgBox "西岡は存在します"
+        　End If
+        End Sub
+      </code>
+    </pre>
+        </span><br>
+        <img src="../assets/imgs/img9.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer18">
+      <INPUT class="send" type="button" value="回答する" onClick="check18()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check18b()"></P>
+        </FORM>
+
+<!-- ーーーー問題19ーーーー -->
+<SCRIPT language="JavaScript">
+  function check19(){
+  if (document.que19.answer19.value.toUpperCase()=="EOMONTH"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check19b() {
+        alert("EoMonth");
+    }
+  </SCRIPT>
+    <FORM name="que19">
+      <span class="source">
+      　<h2>Q19)　次のコードは、A列に入力されている日付から、その月の月末日を求めてB列に代入するマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+      </h2>
+      <pre>
+        <code>
+      Sub Macro1()
+      　Dim i As Long
+      　For i = 2 To 10
+      　　Cells(i, 2) = WorksheetFunction.[空欄](Cells(i, 1), 0)
+      　Next i
+      End Sub
+    </code>
+  </pre>
+      </span><br>
+        <img src="../assets/imgs/img10.png"alt="問題のシート画像" width="300"><br>
+      　答え：　<INPUT type="text" name="answer19">
+      <INPUT class="send" type="button" value="回答する" onClick="check19()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check19b()"></P>
+        </FORM>
+
+</div>
+</div>
+</body>
+</html>
