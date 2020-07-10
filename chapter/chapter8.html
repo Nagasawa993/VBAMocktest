@@ -5,51 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <title>VBA 8章</title>
 </head>
 
 <body>
-  <div class="header">
-    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
-  </div>
-
-  <div class="main">
-    <div class="side-list">
-      <ul>
-        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
-        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
-        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
-        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
-        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
-        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
-        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
-        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
-        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
-        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand text-light" href="../index.html">Excel VBAスタンダード</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="https://excel-ubara.com/excelvba1/">参考サイト</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="https://vbae.odyssey-com.co.jp/about/excel_standard.html">試験の申し込み</a>
+        </li>
       </ul>
     </div>
+  </nav>
 
+  <div class="main row">
+      <div class="side-list offset-md-1 mt-2">
+        <ul>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter1.html"><b>1章 プロシージャ</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter2.html"><b>2章 変数の活用</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter3.html"><b>3章 ステートメント</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter4.html"><b>4章 ファイルの操作</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter5.html"><b>5章 ワークシート関数の利用</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter6.html"><b>6章 検索とオートフィルター</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter7.html"><b>7章 データの並べ替え</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter8.html"><b>8章 テーブルの操作</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter9.html"><b>9章 エラー対応</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter10.html"><b>10章 デバッグ</b></a></li>
+        </ul>
+      </div>
 
-    <div class="page">
+    <div class="page col mt-2">
   <h1>【8章】　ステートメント</h1>
 
-<!-- ーーーー問題30ーーーー -->
+<!-- ーーーー問題8_1ーーーー -->
 <SCRIPT language="JavaScript">
-  function check30(){
-  if (document.que30.answer30.value.toUpperCase()=="RANGE"){
+  function check8_1(){
+  if (document.que8_1.answer8_1.value.toUpperCase()=="RANGE"){
        alert("正解です");
   }
   else {
        alert("残念、間違いです")
   }
   }
-    function check30b() {
+    function check8_1b() {
         alert("Range");
     }
   </SCRIPT>
-    <FORM name="que30">
+    <FORM name="que8_1">
       <span class="source">
-      　<h2>Q30)　次のコードは、1列目が"リンゴ"であるデータを、タイトル行ごとSheet2のセルA1へコピーするマクロである。
+      　<h2>Q8_1)　次のコードは、1列目が"リンゴ"であるデータを、タイトル行ごとSheet2のセルA1へコピーするマクロである。
         [空欄]に入る適切な語句を入力しなさい。
       </h2>
       <pre>
@@ -63,34 +77,34 @@
       End Sub
     </code>
   </pre>
-      </span><br>
+      </span>
         <img src="../assets/imgs/img21.png"alt="問題のシート画像" width="350"><br>
-      　答え：　<INPUT type="text" name="answer30">
-      <INPUT class="send" type="button" value="回答する" onClick="check30()">
+      　答え：　<INPUT type="text" name="answer8_1">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_1()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
-        onclick="check30b()"></P>
+        onclick="check8_1b()"></P>
         </FORM>
 
-<!-- ーーーー問題31ーーーー -->
+<!-- ーーーー問題8_2ーーーー -->
 <SCRIPT language="JavaScript">
-  function check31(){
-  if (document.que31.answer31.value.toUpperCase()=="DATEBODYRANGE"){
+  function check8_2(){
+  if (document.que8_2.answer8_2.value.toUpperCase()=="DATABODYRANGE"){
        alert("正解です");
   }
   else {
        alert("残念、間違いです")
   }
   }
-    function check31b() {
+    function check8_2b() {
         alert("DataBodyRange");
     }
   </SCRIPT>
-    <FORM name="que31">
+    <FORM name="que8_2">
       <span class="source">
-      　<h2>Q31)　次のコードは、1列目が"リンゴ"であるデータのうち、タイトル行を除いたデータだけSheet2のセルA1へコピーするマクロである。
+      　<h2>Q8_2)　次のコードは、1列目が"リンゴ"であるデータのうち、タイトル行を除いたデータだけSheet2のセルA1へコピーするマクロである。
         [空欄]に入る適切な語句を入力しなさい。
       </h2>
       <pre>
@@ -104,34 +118,34 @@
       End Sub
     </code>
   </pre>
-      </span><br>
+      </span>
         <img src="../assets/imgs/img21.png"alt="問題のシート画像" width="350"><br>
-      　答え：　<INPUT type="text" name="answer31">
-      <INPUT class="send" type="button" value="回答する" onClick="check31()">
+      　答え：　<INPUT type="text" name="answer8_2">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_2()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
-        onclick="check31b()"></P>
+        onclick="check8_2b()"></P>
         </FORM>
 
-<!-- ーーーー問題32ーーーー -->
+<!-- ーーーー問題8_3ーーーー -->
 <SCRIPT language="JavaScript">
-  function check32(){
-  if (document.que32.answer32.value.toUpperCase()=="LISTCOLUMNS"){
+  function check8_3(){
+  if (document.que8_3.answer8_3.value.toUpperCase()=="LISTCOLUMNS"){
        alert("正解です");
   }
   else {
        alert("残念、間違いです")
   }
   }
-    function check32b() {
+    function check8_3b() {
         alert("ListColumns");
     }
   </SCRIPT>
-    <FORM name="que32">
+    <FORM name="que8_3">
       <span class="source">
-      　<h2>Q32)　次のコードは、テーブルに新しい列を追加するマクロである。[空欄]に入る適切な語句を入力しなさい。
+      　<h2>Q8_3)　次のコードは、テーブルに新しい列を追加するマクロである。[空欄]に入る適切な語句を入力しなさい。
       </h2>
       <pre>
         <code>
@@ -140,34 +154,34 @@
       End Sub
     </code>
   </pre>
-      </span><br>
+      </span>
         <img src="../assets/imgs/img22.png"alt="問題のシート画像" width="350"><br>
-      　答え：　<INPUT type="text" name="answer32">
-      <INPUT class="send" type="button" value="回答する" onClick="check32()">
+      　答え：　<INPUT type="text" name="answer8_3">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_3()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
-        onclick="check32b()"></P>
+        onclick="check8_3b()"></P>
         </FORM>
 
-<!-- ーーーー問題33ーーーー -->
+<!-- ーーーー問題8_4ーーーー -->
 <SCRIPT language="JavaScript">
-  function check33(){
-  if (document.que33.answer33.value.toUpperCase()=="[#All]"){
+  function check8_4(){
+  if (document.que8_4.answer8_4.value=="[#All]"){
        alert("正解です");
   }
   else {
        alert("残念、間違いです")
   }
   }
-    function check33b() {
+    function check8_4b() {
         alert("[#All]");
     }
   </SCRIPT>
-    <FORM name="que33">
+    <FORM name="que8_4">
       <span class="source">
-      　<h2>Q33)　次のコードは、1列目が"みかん"であるデータをタイトル行ごとSheet2のセルA1へコピーするマクロである。
+      　<h2>Q8_4)　次のコードは、1列目が"みかん"であるデータをタイトル行ごとSheet2のセルA1へコピーするマクロである。
         [空欄]に入る適切な語句を入力しなさい。
       </h2>
       <pre>
@@ -179,34 +193,34 @@
       End Sub
     </code>
   </pre>
-      </span><br>
+      </span>
         <img src="../assets/imgs/img23.png"alt="問題のシート画像" width="350"><br>
-      　答え：　<INPUT type="text" name="answer33">
-      <INPUT class="send" type="button" value="回答する" onClick="check33()">
+      　答え：　<INPUT type="text" name="answer8_4">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_4()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
-        onclick="check33b()"></P>
+        onclick="check8_4b()"></P>
       </FORM>
 
-<!-- ーーーー問題34ーーーー -->
+<!-- ーーーー問題8_5ーーーー -->
 <SCRIPT language="JavaScript">
-  function check34(){
-  if (document.que34.answer34.value.toUpperCase()=="[#DATA]"){
+  function check8_5(){
+  if (document.que8_5.answer8_5.value.toUpperCase()=="[#DATA]"){
        alert("正解です");
   }
   else {
        alert("残念、間違いです")
   }
   }
-    function check34b() {
+    function check8_5b() {
         alert("[#Data]");
     }
   </SCRIPT>
-    <FORM name="que34">
+    <FORM name="que8_5">
       <span class="source">
-      　<h2>Q34)　次のコードは、1列目が"梨"であるデータのうちタイトル行を除いたデータだけSheet2のセルA1へコピーするマクロである。
+      　<h2>Q8_5)　次のコードは、1列目が"梨"であるデータのうちタイトル行を除いたデータだけSheet2のセルA1へコピーするマクロである。
         [空欄]に入る適切な語句を入力しなさい。
       </h2>
       <pre>
@@ -218,40 +232,40 @@
       End Sub
     </code>
   </pre>
-      </span><br>
+      </span>
         <img src="../assets/imgs/img23.png"alt="問題のシート画像" width="350"><br>
-      　答え：　<INPUT type="text" name="answer34">
-      <INPUT class="send" type="button" value="回答する" onClick="check34()">
+      　答え：　<INPUT type="text" name="answer8_5">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_5()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
-        onclick="check34b()"></P>
+        onclick="check8_5b()"></P>
         </FORM>
 
-<!-- ーーーー問題35ーーーー -->
+<!-- ーーーー問題8_6ーーーー -->
 <SCRIPT language="JavaScript">
-  function check35(){
-  if (document.que35.answer35.value=="[単価]"){
+  function check8_6(){
+  if (document.que8_6.answer8_6.value=="[単価]"){
        alert("正解です");
   }
-  else if (document.que35.answer35.value=="[[#Data],[単価]]"){
+  else if (document.que8_6.answer8_6.value=="[[#Data],[単価]]"){
       alert("正解です");
   }
-  else if (document.que35.answer35.value=="[[#All],[単価]]"){
+  else if (document.que8_6.answer8_6.value=="[[#All],[単価]]"){
       alert("正解です");
   }
   else {
        alert("残念、間違いです")
   }
   }
-    function check35b() {
+    function check8_6b() {
         alert("[単価]、[[#Data],[単価]]、[[#All],[単価]]");
     }
   </SCRIPT>
-    <FORM name="que35">
+    <FORM name="que8_6">
       <span class="source">
-      　<h2>Q35)　次のコードは、テーブル内の"単価"列を削除するマクロである。[空欄]に入る適切な語句を入力しなさい。
+      　<h2>Q8_6)　次のコードは、テーブル内の"単価"列を削除するマクロである。[空欄]に入る適切な語句を入力しなさい。
       </h2>
       <pre>
         <code>
@@ -260,18 +274,159 @@
       End Sub
     </code>
   </pre>
-      </span><br>
+      </span>
         <img src="../assets/imgs/img21.png"alt="問題のシート画像" width="350"><br>
-      　答え：　<INPUT type="text" name="answer35">
-      <INPUT class="send" type="button" value="回答する" onClick="check35()">
+      　答え：　<INPUT type="text" name="answer8_6">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_6()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
-        onclick="check35b()"></P>
+        onclick="check8_6b()"></P>
         </FORM>
+
+<!-- ーーーー問題8_7ーーーー -->
+<SCRIPT language="JavaScript">
+  function check8_7(){
+  if (document.que8_7.answer8_7.value.toUpperCase()==".LISTOBJECT.LISTCOLUMNS.ADD"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check8_7b() {
+        alert(".Listobject.Listcolumns.Add");
+    }
+  </SCRIPT>
+    <FORM name="que8_7">
+      <span class="source">
+      　<h2>Q8_7)　次のコードは、テーブルに新しい列を挿入するマクロである。ListObjectを使いD列に新しい列を挿入するとき、[空欄]に入る適切な語句のを入力しなさい。
+      </h2>
+      <pre>
+        <code>
+          Sub Macro1()
+          　Range("A1")[空欄]
+          End Sub
+    </code>
+  </pre>
+      </span>
+        <img src="../assets/imgs/img21.png"alt="問題のシート画像" width="350"><br>
+      　答え：　<INPUT type="text" name="answer8_7">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_7()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display mt-1" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check8_7b()"></P>
+        </FORM>
+
+<!-- ーーーー問題8_8ーーーー -->
+<SCRIPT language="JavaScript">
+  function check8_8(){
+  if (document.que8_8.answer8_8.value.toUpperCase()=="HEADERROWRANGE"){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check8_8b() {
+        alert("HeaderRowRange");
+    }
+  </SCRIPT>
+    <FORM name="que8_8">
+      <span class="source">
+        <h2>Q8_8)　次のコードは、作成したテーブルのデータのうち、タイトル行だけSheet2のセルA1へコピーするマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+      </h2>
+      <pre>
+        <code>
+          Sub tes1()
+          　Range("A1").ListObject.[空欄] _
+          　.Copy Sheets("Sheet2").Range("A1")
+          End Sub
+        </code>
+      </pre>
+      </span>
+        <img src="../assets/imgs/img21.png"alt="問題のシート画像" width="350"><br>
+      　答え：　<INPUT type="text" name="answer8_8">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_8()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display mt-1" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check8_8b()"></P>
+        </FORM>
+
+<!-- ーーーー問題8_9ーーーー -->
+<SCRIPT language="JavaScript">
+  function check8_9(){
+  if (document.que8_9.answer8_9.value=="\"=[@数量]*2\""){
+       alert("正解です");
+  }
+  else {
+       alert("残念、間違いです")
+  }
+  }
+    function check8_9b() {
+      alert("\"=[@数量]*2\"");
+    }
+  </SCRIPT>
+    <FORM name="que8_9">
+      <span class="source">
+        <h2>Q8_9)　次のコードは、新しく追加したD列に数量列の2倍の数値を表示させるマクロである。
+        [空欄]に入る適切な語句を入力しなさい。
+      </h2>
+      <pre>
+        <code>
+          Sub Macro1()
+          　Range("D2")=
+          End Sub
+        </code>
+      </pre>
+      </span>
+        <img src="../assets/imgs/img27.png"alt="問題のシート画像" width="450"><br>
+      　答え：　<INPUT type="text" name="answer8_9">
+      <INPUT class="send" type="button" value="回答する" onClick="check8_9()">
+      </FORM>
+      <FORM method="POST"><P>
+        <INPUT class="display mt-1" type="button" name="B1"
+        value="答えを表示する"
+        onclick="check8_9b()"></P>
+        </FORM>
+
+  <!-- ーーーー問題8_10ーーーー -->
+  <SCRIPT LANGUAGE="JavaScript">
+    function Check8_10() {
+    answer=document.que8_10.mondai8_10[3].checked;
+    if(answer==true){alert("正解")}
+    else{alert("不正解")}
+    }
+    function check8_10b() {
+        alert("#Headers");
+    }
+    </SCRIPT>
+    <FORM name="que8_10">
+      <h2>Q8_10)　下の図で構造化参照を用いて部位を特定する時、セルA1~セルC1の見出し部分はなんと表現されるか。正しいものを、次の中から1つ選択しなさい。
+      </h2>
+      </span>
+        <img src="../assets/imgs/img21.png"alt="問題のシート画像" width="300"><br>
+    <input type=radio name=mondai8_10>Heads<br>
+    <input type=radio name=mondai8_10>Headers<br>
+    <input type=radio name=mondai8_10>#Hesds<br>
+    <input type=radio name=mondai8_10>#Headers<br>
+    <input class="send" type=button name=ok value="回答する" onclick="Check8_10()">
+    <INPUT class="display mt-1" type="button" name="B1"value="答えを表示する"onclick="check8_10b()"></P>
+    </FORM>
 
 </div>
 </div>
+
+      <!-- Bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
 </html>

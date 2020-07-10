@@ -5,32 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <title>VBA 5章</title>
 </head>
 
 <body>
-  <div class="header">
-    <div class="header-logo"><a href="../index.html">Excel VBAスタンダード</a></div>
-  </div>
-
-  <div class="main">
-    <div class="side-list">
-      <ul>
-        <li><a class="btn" href="../chapter/chapter1.html">1章 プロシージャ</a></li>
-        <li><a class="btn" href="../chapter/chapter2.html">2章 変数の活用</a></li>
-        <li><a class="btn" href="../chapter/chapter3.html">3章 ステートメント</a></li>
-        <li><a class="btn" href="../chapter/chapter4.html">4章 ファイルの操作</a></li>
-        <li><a class="btn" href="../chapter/chapter5.html">5章 ワークシート関数の利用</a></li>
-        <li><a class="btn" href="../chapter/chapter6.html">6章 検索とオートフィルター</a></li>
-        <li><a class="btn" href="../chapter/chapter7.html">7章 データの並べ替え</a></li>
-        <li><a class="btn" href="../chapter/chapter8.html">8章 テーブルの操作</a></li>
-        <li><a class="btn" href="../chapter/chapter9.html">9章 エラー対応</a></li>
-        <li><a class="btn" href="../chapter/chapter10.html">10章 デバッグ</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand text-light" href="../index.html">Excel VBAスタンダード</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="https://excel-ubara.com/excelvba1/">参考サイト</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="https://vbae.odyssey-com.co.jp/about/excel_standard.html">試験の申し込み</a>
+        </li>
       </ul>
     </div>
+  </nav>
 
+  <div class="main row">
+      <div class="side-list offset-md-1 mt-2">
+        <ul>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter1.html"><b>1章 プロシージャ</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter2.html"><b>2章 変数の活用</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter3.html"><b>3章 ステートメント</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter4.html"><b>4章 ファイルの操作</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter5.html"><b>5章 ワークシート関数の利用</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter6.html"><b>6章 検索とオートフィルター</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter7.html"><b>7章 データの並べ替え</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter8.html"><b>8章 テーブルの操作</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter9.html"><b>9章 エラー対応</b></a></li>
+          <li class="mb-2"><a class="alert-success btn text-left" href="../chapter/chapter10.html"><b>10章 デバッグ</b></a></li>
+        </ul>
+      </div>
 
-    <div class="page">
+    <div class="page col mt-2">
   <h1>【5章】　ワークシート関数の利用</h1>
 <!-- ーーーー問題16ーーーー -->
 <SCRIPT language="JavaScript">
@@ -58,13 +72,13 @@
         End Sub
       </code>
     </pre>
-        </span><br>
+        </span>
         <img src="../assets/imgs/img7.png"alt="問題のシート画像" width="300"><br>
       　答え：　<INPUT type="text" name="answer16">
       <INPUT class="send" type="button" value="回答する" onClick="check16()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
         onclick="check16b()"></P>
         </FORM>
@@ -94,13 +108,13 @@
         End Sub
       </code>
     </pre>
-        </span><br>
+        </span>
         <img src="../assets/imgs/img8.png"alt="問題のシート画像" width="200"><br>
       　答え：　<INPUT type="text" name="answer17">
       <INPUT class="send" type="button" value="回答する" onClick="check17()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
         onclick="check17b()"></P>
         </FORM>
@@ -134,13 +148,13 @@
         End Sub
       </code>
     </pre>
-        </span><br>
+        </span>
         <img src="../assets/imgs/img9.png"alt="問題のシート画像" width="300"><br>
       　答え：　<INPUT type="text" name="answer18">
       <INPUT class="send" type="button" value="回答する" onClick="check18()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
         onclick="check18b()"></P>
         </FORM>
@@ -174,18 +188,24 @@
       End Sub
     </code>
   </pre>
-      </span><br>
+      </span>
         <img src="../assets/imgs/img10.png"alt="問題のシート画像" width="300"><br>
       　答え：　<INPUT type="text" name="answer19">
       <INPUT class="send" type="button" value="回答する" onClick="check19()">
       </FORM>
       <FORM method="POST"><P>
-        <INPUT class="display" type="button" name="B1"
+        <INPUT class="display mt-1" type="button" name="B1"
         value="答えを表示する"
         onclick="check19b()"></P>
         </FORM>
 
 </div>
 </div>
+
+      <!-- Bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
 </html>
